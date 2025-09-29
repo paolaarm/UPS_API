@@ -1,0 +1,14 @@
+### 1) Get OAuth token (Client Credentials) 
+
+POST {{UPS_BASE_URL}}/security/v1/oauth/token 
+Content-Type: application/x-www-form-urlencoded 
+Authorization: Basic {{Client_ID}}:{{Client_Secret}} 
+
+grant_type=client_credentials 
+
+### GET TRACKING NUMBER INFORMATION 
+
+GET {{UPS_BASE_URL}}/api/track/v1/details/{{Inquiry_Number}} 
+Authorization: Bearer {{access_token}} 
+transId: {{Transaction_ID}} 
+transactionSrc: {{Tracking_Source}} 

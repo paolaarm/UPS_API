@@ -11,3 +11,11 @@
 At the "Shared" level that is variables that will be used in both testing and production added the UPS client_id and client_secret, tracking_source, transaction_id
 and Inquiry_Number (the tracking number). 
 
+settings.json allows you to have variables for different environments. In this case I created a set of variables for the testing environment and another set of variables for 
+the production environment. In reality only two variables for each. 
+* UPS_BASE_URL
+* access token
+
+  
+
+4. Back in the HTTP file created a POST request to obtain credentials 

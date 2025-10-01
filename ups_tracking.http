@@ -1,34 +1,17 @@
 
-#=====================================================
-# Environment Variables 
-#=====================================================
-@UPS_INQUIRY_NUMBER = 1Z6262170397444840
-
-#=================================================================
-# Request to get OAuth token (Client Credentials) 
-#=================================================================
-#  request name "response"
-#  content-type: application/x-www-form-urlencoded
-#  Authorization: Basic (Base64 encoded client_id client_secret)
-# Add the value of Authorization header in the raw value of username 
-# and password which is separated by space. 
-# REST Client extension will do the base64 encoding automatically.
-#=================================================================
+### Request to get OAuth token (Client Credentials)
 # @name response
 POST {{UPS_BASE_URL}}/security/v1/oauth/token
 Content-Type: application/x-www-form-urlencoded
-Authorization: Basic {{UPS_CLIENT_ID}} {{UPS_CLIENT_SECRET}}
+Authorization: Basic {{UPS_CLIENT_ID}}:{{UPS_CLIENT_SECRET}}
 
 grant_type=client_credentials
 
-#================================================================
-# Obtain the access_token from the response of above request
-#================================================================
-@access_token = {{response.response.body.$.access_token}}
 
-#================================================================
-# GET request to obtain tracking details
-#================================================================
+
+### Request to track a package using the access token
+@access_token = {{response.response.body.$.access_token}}
+@UPS_INQUIRY_NUMBER = 1Z6262170397444840
 GET {{UPS_BASE_URL}}/api/track/v1/details/{{UPS_INQUIRY_NUMBER}}
 Authorization: Bearer {{access_token}}
 transId: {{UPS_TRANSACTION_ID}}

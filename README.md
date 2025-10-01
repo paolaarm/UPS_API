@@ -38,3 +38,17 @@ Once the POST request returns the response, we can extract the "token_access" an
 
 
 6. GET request
+
+Created a GET request to obtain information regarding a specific shipment. 
+
+ RESPONSE OBTAINED FOR TESTING ENVIRONMENT 
+
+ <img width="534" height="736" alt="image" src="https://github.com/user-attachments/assets/4432a7ee-2c06-44f9-840e-6a2df606603b" />
+
+
+ RESPONSE OBTAINED IN PRODUCTION ENVIRONMENT [REAL TRACKING]
+
+ <img width="523" height="716" alt="image" src="https://github.com/user-attachments/assets/16871323-06b9-4ff2-bb28-206a78a9d1bf" />
+
+
+

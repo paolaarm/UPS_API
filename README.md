@@ -26,11 +26,13 @@ the production environment. In reality only a variable for each that is the Base
  * Using Ctrl+Alt+E one can change the environment.
   <img width="319" height="77" alt="image" src="https://github.com/user-attachments/assets/77418b46-bd63-4bb6-9eaa-a12d8724965b" />
   
-5. Saving access token in a variable
+5. Saving access token in a variable.
+
 Once the POST request returns the response, we can extract the "token_access" and save it in an environment variable.
 
 @access_token =    {{response.response.body.$.access_token}}
-[name of variable] - [from the response request and response body extract the access token and saved in "access token."]
+
+[name of variable] - [from the response request and response body extract the access token and save it in "access token."]
 
 <img width="383" height="70" alt="image" src="https://github.com/user-attachments/assets/1fbc01aa-166b-4fb7-a7f3-22fe4cca03c6" />
 

@@ -1,6 +1,6 @@
- # UPS Tracking API Workflow VSCode REST Client (Extension)
+ **# UPS Tracking API Workflow VSCode REST Client (Extension)
 
-### STEPS 
+### STEPS **
 
 1. Installing REST Client (Extension)
 2. Creating ups_tracking.http file

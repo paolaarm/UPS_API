@@ -20,7 +20,7 @@ the production environment. In reality only a variable for each that is the Base
 * UPS_BASE_URL -> https://wwwcie.ups.com [Testing] ->  https://onlinetools.ups.com [Production]
 
 
-4. Back in the HTTP file added an environment variable  for UPS_INQUIRY_NUMBER then created a POST request to obtain credentials and named the request --> # @name response
+4. Back in the HTTP file created a POST request to obtain credentials and named the request --> # @name response
 
  * Utilized the same request structure to obtain Testing access token and Production access token simply by changing the environment.
  

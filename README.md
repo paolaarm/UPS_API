@@ -38,7 +38,8 @@ Once the POST request returns the response, we can extract the "token_access" an
 
 [name of variable] - [from the response request and response body extract the access token and save it in "access token."]
 
-<img width="383" height="70" alt="image" src="https://github.com/user-attachments/assets/1fbc01aa-166b-4fb7-a7f3-22fe4cca03c6" />
+<img width="458" height="78" alt="image" src="https://github.com/user-attachments/assets/1a439bb1-de69-4bd7-ae5b-02f7719ed464" />
+
 
 
 6. GET request

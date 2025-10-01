@@ -6,20 +6,23 @@
 2. Creating ups_tracking.http file
 3. Creating Environment Variables - REST Client Setting --> Environment Variables --> Edit in settings.json
    
-   <img width="443" height="131" alt="image" src="https://github.com/user-attachments/assets/ece9e9f1-09b8-4360-853e-22ac33c04c0e" />
+   <img width="653" height="331" alt="image" src="https://github.com/user-attachments/assets/aaa1d57c-b2ad-4515-89cd-e189a9456d1b" />
 
-At the "Shared" level, that is variables that will be used in both testing and production added the UPS client_id and client_secret, tracking_source, transaction_id
-and Inquiry_Number (the tracking number). 
 
-settings.json allows you to have variables for different environments. In this case I created a set of variables for the testing environment and another set of variables for 
+At the "Shared" level, that is variables that will be used in both testing and production added 
+* UPS_CLIENT_ID
+* UPS_CLIENT_SECRET
+* UPS_TRANSACTION_SRC
+* UPS_TRANSACTION_ID
+
+The settings.json allows you to have variables for different environments. In this case I created a set of variables for the testing environment and another set of variables for 
 the production environment. In reality only a variable for each that is the Base URL.
 * UPS_BASE_URL -> https://wwwcie.ups.com [Testing] ->  https://onlinetools.ups.com [Production]
 
 
-4. Back in the HTTP file created a POST request to obtain credentials and named the request --> # @name response
+4. Back in the HTTP file added an environment variable  for UPS_INQUIRY_NUMBER then created a POST request to obtain credentials and named the request --> # @name response
    
-<img width="415" height="170" alt="image" src="https://github.com/user-attachments/assets/de9a1dd4-af49-46d5-8305-1326d341c6b7" />
-
+<img width="506" height="305" alt="image" src="https://github.com/user-attachments/assets/6c7d8960-d8cd-414f-afa6-d7f1355b5b89" />
 
  * Utilized the same request structure to obtain Testing access token and Production access token simply by changing the environment.
  
@@ -41,6 +44,9 @@ Once the POST request returns the response, we can extract the "token_access" an
 
 Created a GET request to obtain information regarding a specific shipment. 
 
+<img width="398" height="105" alt="image" src="https://github.com/user-attachments/assets/277964ff-3f24-4e56-b5d3-4d0a98fdc081" />
+
+
  RESPONSE OBTAINED FOR TESTING ENVIRONMENT 
 
  <img width="534" height="736" alt="image" src="https://github.com/user-attachments/assets/4432a7ee-2c06-44f9-840e-6a2df606603b" />
@@ -49,6 +55,5 @@ Created a GET request to obtain information regarding a specific shipment.
  RESPONSE OBTAINED IN PRODUCTION ENVIRONMENT [REAL TRACKING]
 
  <img width="523" height="716" alt="image" src="https://github.com/user-attachments/assets/16871323-06b9-4ff2-bb28-206a78a9d1bf" />
-
 
 

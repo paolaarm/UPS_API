@@ -1,14 +1,21 @@
-### 1) Get OAuth token (Client Credentials) 
+# 1) Get OAuth token (Client Credentials) 
+# @name token_response
+#=================================================================
+# Add the value of Authorization header in the raw value 
+#of username and password, which is separated by space. 
+#REST Client extension will do the base64 encoding automatically.
+#=================================================================
+POST {{UPS_BASE_URL}}/security/v1/oauth/token
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic {{Client_ID}} {{Client_Secret}}
 
-POST {{UPS_BASE_URL}}/security/v1/oauth/token 
-Content-Type: application/x-www-form-urlencoded 
-Authorization: Basic {{Client_ID}}:{{Client_Secret}} 
+grant_type=client_credentials
 
-grant_type=client_credentials 
+### 2) Extract the token
+@access_token = {{token_response.response.body.$.access_token}}
 
-### GET TRACKING NUMBER INFORMATION 
-
-GET {{UPS_BASE_URL}}/api/track/v1/details/{{Inquiry_Number}} 
-Authorization: Bearer {{access_token}} 
-transId: {{Transaction_ID}} 
-transactionSrc: {{Tracking_Source}} 
+### 3) Track a Shipment
+GET {{UPS_BASE_URL}}/api/track/v1/details/{{Inquiry_Number}}
+Authorization: Bearer {{access_token}}
+transId: {{Transaction_ID}}
+transactionSrc: {{Tracking_Source}}

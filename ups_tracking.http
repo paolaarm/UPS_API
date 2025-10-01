@@ -32,4 +32,4 @@ grant_type=client_credentials
 GET {{UPS_BASE_URL}}/api/track/v1/details/{{UPS_INQUIRY_NUMBER}}
 Authorization: Bearer {{access_token}}
 transId: {{UPS_TRANSACTION_ID}}
-transactionSrc: {{UPS_TRANSACTION_SRC}}
+transactionSrc: {{UPS_TRANSACTION_SRC}} 

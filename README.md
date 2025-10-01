@@ -6,10 +6,16 @@
 2. Creating ups_tracking.http file
 3. Creating Environment Variables - REST Client Setting --> Environment Variables --> Edit in settings.json
    
-   <img width="443" height="131" alt="image" src="https://github.com/user-attachments/assets/ece9e9f1-09b8-4360-853e-22ac33c04c0e" />
+   <img width="653" height="331" alt="image" src="https://github.com/user-attachments/assets/aaa1d57c-b2ad-4515-89cd-e189a9456d1b" />
 
-At the "Shared" level, that is variables that will be used in both testing and production added the UPS client_id and client_secret, tracking_source, transaction_id
-and Inquiry_Number (the tracking number). 
+
+At the "Shared" level, that is variables that will be used in both testing and production added 
+* UPS_CLIENT_ID
+* UPS_CLIENT_SECRET
+* UPS_TRANSACTION_SRC
+* UPS_TRANSACTION_ID
+
+UPS client_id and client_secret, tracking_source, transaction_id. The 
 
 settings.json allows you to have variables for different environments. In this case I created a set of variables for the testing environment and another set of variables for 
 the production environment. In reality only a variable for each that is the Base URL.

@@ -1,4 +1,4 @@
- # UPS Tracking API Workflow VSCode REST Client (Extension)
+# UPS Tracking API Workflow VSCode REST Client (Extension)
 
 ### STEPS 
 
@@ -12,20 +12,43 @@ At the "Shared" level, that is variables that will be used in both testing and p
 and Inquiry_Number (the tracking number). 
 
 settings.json allows you to have variables for different environments. In this case I created a set of variables for the testing environment and another set of variables for 
-the production environment. In reality only two variables for each. 
+the production environment. In reality only a variable for each that is the Base URL.
 * UPS_BASE_URL -> https://wwwcie.ups.com [Testing] ->  https://onlinetools.ups.com [Production]
-* access token -> Obtained in step 4
 
-4. Back in the HTTP file created a POST request to obtain credentials
+
+4. Back in the HTTP file created a POST request to obtain credentials and named the request --> # @name response
    
-<img width="273" height="59" alt="image" src="https://github.com/user-attachments/assets/8f070001-d91e-4f70-a0ef-ba7d7d435a1f" />
+<img width="415" height="170" alt="image" src="https://github.com/user-attachments/assets/de9a1dd4-af49-46d5-8305-1326d341c6b7" />
+
 
  * Utilized the same request structure to obtain Testing access token and Production access token simply by changing the environment.
+ 
  * Using Ctrl+Alt+E one can change the environment.
-
   <img width="319" height="77" alt="image" src="https://github.com/user-attachments/assets/77418b46-bd63-4bb6-9eaa-a12d8724965b" />
-5. Saved each token at their corresponding Environment Variables 
+  
+5. Saving access token in a variable.
 
+Once the POST request returns the response, we can extract the "token_access" and save it in an environment variable.
+
+@access_token =    {{response.response.body.$.access_token}}
+
+[name of variable] - [from the response request and response body extract the access token and save it in "access token."]
+
+<img width="383" height="70" alt="image" src="https://github.com/user-attachments/assets/1fbc01aa-166b-4fb7-a7f3-22fe4cca03c6" />
 
 
 6. GET request
+
+Created a GET request to obtain information regarding a specific shipment. 
+
+ RESPONSE OBTAINED FOR TESTING ENVIRONMENT 
+
+ <img width="534" height="736" alt="image" src="https://github.com/user-attachments/assets/4432a7ee-2c06-44f9-840e-6a2df606603b" />
+
+
+ RESPONSE OBTAINED IN PRODUCTION ENVIRONMENT [REAL TRACKING]
+
+ <img width="523" height="716" alt="image" src="https://github.com/user-attachments/assets/16871323-06b9-4ff2-bb28-206a78a9d1bf" />
+
+
+

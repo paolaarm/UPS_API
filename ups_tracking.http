@@ -1,5 +1,5 @@
 # 1) Get OAuth token (Client Credentials) 
-# @name token_response
+# @name response
 #=================================================================
 # Add the value of Authorization header in the raw value 
 #of username and password, which is separated by space. 
@@ -12,7 +12,7 @@ Authorization: Basic {{Client_ID}} {{Client_Secret}}
 grant_type=client_credentials
 
 ### 2) Extract the token
-@access_token = {{token_response.response.body.$.access_token}}
+@access_token = {{response.response.body.$.access_token}}
 
 ### 3) Track a Shipment
 GET {{UPS_BASE_URL}}/api/track/v1/details/{{Inquiry_Number}}

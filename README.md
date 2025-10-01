@@ -22,7 +22,8 @@ the production environment. In reality only a variable for each that is the Base
 
 4. Back in the HTTP file added an environment variable  for UPS_INQUIRY_NUMBER then created a POST request to obtain credentials and named the request --> # @name response
    
-<img width="506" height="305" alt="image" src="https://github.com/user-attachments/assets/6c7d8960-d8cd-414f-afa6-d7f1355b5b89" />
+<img width="499" height="340" alt="image" src="https://github.com/user-attachments/assets/358682d9-8e51-4f6c-b2d6-7538812a49e4" />
+
 
  * Utilized the same request structure to obtain Testing access token and Production access token simply by changing the environment.
  

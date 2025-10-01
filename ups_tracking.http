@@ -1,3 +1,9 @@
+
+#=====================================================
+# Environment Variables 
+#=====================================================
+@UPS_INQUIRY_NUMBER = 1Z6262170397444840
+
 # 1) Get OAuth token (Client Credentials) 
 # @name response
 #=================================================================
@@ -7,7 +13,7 @@
 #=================================================================
 POST {{UPS_BASE_URL}}/security/v1/oauth/token
 Content-Type: application/x-www-form-urlencoded
-Authorization: Basic {{Client_ID}} {{Client_Secret}}
+Authorization: Basic {{UPS_CLIENT_ID}} {{UPS_CLIENT_SECRET}}
 
 grant_type=client_credentials
 
@@ -15,7 +21,7 @@ grant_type=client_credentials
 @access_token = {{response.response.body.$.access_token}}
 
 ### 3) Track a Shipment
-GET {{UPS_BASE_URL}}/api/track/v1/details/{{Inquiry_Number}}
+GET {{UPS_BASE_URL}}/api/track/v1/details/{{UPS_INQUIRY_NUMBER}}
 Authorization: Bearer {{access_token}}
-transId: {{Transaction_ID}}
-transactionSrc: {{Tracking_Source}}
+transId: {{UPS_TRANSACTION_ID}}
+transactionSrc: {{UPS_TRANSACTION_SRC}}

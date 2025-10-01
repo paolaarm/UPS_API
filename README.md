@@ -15,17 +15,14 @@ At the "Shared" level, that is variables that will be used in both testing and p
 * UPS_TRANSACTION_SRC
 * UPS_TRANSACTION_ID
 
-UPS client_id and client_secret, tracking_source, transaction_id. The 
-
-settings.json allows you to have variables for different environments. In this case I created a set of variables for the testing environment and another set of variables for 
+The settings.json allows you to have variables for different environments. In this case I created a set of variables for the testing environment and another set of variables for 
 the production environment. In reality only a variable for each that is the Base URL.
 * UPS_BASE_URL -> https://wwwcie.ups.com [Testing] ->  https://onlinetools.ups.com [Production]
 
 
-4. Back in the HTTP file created a POST request to obtain credentials and named the request --> # @name response
+4. Back in the HTTP file added an environment variable  for UPS_INQUIRY_NUMBER then created a POST request to obtain credentials and named the request --> # @name response
    
-<img width="415" height="170" alt="image" src="https://github.com/user-attachments/assets/de9a1dd4-af49-46d5-8305-1326d341c6b7" />
-
+<img width="506" height="305" alt="image" src="https://github.com/user-attachments/assets/6c7d8960-d8cd-414f-afa6-d7f1355b5b89" />
 
  * Utilized the same request structure to obtain Testing access token and Production access token simply by changing the environment.
  

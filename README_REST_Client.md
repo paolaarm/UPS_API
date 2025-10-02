@@ -19,8 +19,10 @@ The settings.json allows you to have variables for different environments. In th
 the production environment. In reality only a variable for each that is the Base URL.
 * UPS_BASE_URL -> https://wwwcie.ups.com [Testing] ->  https://onlinetools.ups.com [Production]
 
+* UPS_INQUIRY_NUMBER was added as environment variable in the HTTP file.
+4. Back in the HTTP file created a POST request to obtain credentials and named the request --> # @name response
 
-4. Back in the HTTP file added an environment variable  for UPS_INQUIRY_NUMBER then created a POST request to obtain credentials and named the request --> # @name response
+<img width="389" height="131" alt="image" src="https://github.com/user-attachments/assets/59d729bc-e115-49d6-9078-3282d4b714d7" />
 
  * Utilized the same request structure to obtain Testing access token and Production access token simply by changing the environment.
  
@@ -35,7 +37,8 @@ Once the POST request returns the response, we can extract the "token_access" an
 
 [name of variable] - [from the response request and response body extract the access token and save it in "access token."]
 
-<img width="458" height="78" alt="image" src="https://github.com/user-attachments/assets/1a439bb1-de69-4bd7-ae5b-02f7719ed464" />
+<img width="369" height="41" alt="image" src="https://github.com/user-attachments/assets/b2dac0dd-8700-48b7-8c21-d27d34ce3ed4" />
+
 
 
 6. GET request

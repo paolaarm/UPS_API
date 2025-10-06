@@ -1,0 +1,40 @@
+### Request to get OAuth token (Client Credentials)
+# @name token_response
+POST {{UPS_BASE_URL}}/security/v1/oauth/token
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic {{UPS_CLIENT_ID}}:{{UPS_CLIENT_SECRET}}
+
+grant_type=client_credentials
+
+### Request to validate an address using the access token
+@access_token = {{token_response.response.body.$.access_token}}
+@ADDR_LINE1 = 425 N Martingale Rd
+@ADDR_LINE2 =
+@ADDR_CITY = Schaumburg
+@ADDR_STATE = IL
+@ADDR_POSTAL = 60173
+@ADDR_COUNTRY = US
+
+POST {{UPS_BASE_URL}}/api/addressvalidation/{{version}}/{{requestoption}}?regionalrequestindicator=True&maximumcandidatelistsize=50
+Authorization: Bearer {{access_token}}
+transId: av-{{$timestamp}}
+transactionSrc: {{UPS_TRANSACTION_SRC}}
+Content-Type: application/json
+{
+    "XAVRequest": {
+        "AddressKeyFormat": {
+            "ConsigneeName": "",
+            "BuildingName": "",
+            "AddressLine": [
+                "{{ADDR_LINE1}}"
+            ],
+            "Region": "",
+            "PoliticalDivision2": "{{ADDR_CITY}}",
+            "PoliticalDivision1": "{{ADDR_STATE}}",
+            "PostcodePrimaryLow": "{{ADDR_POSTAL}}",
+            "PostcodeExtendedLow": "",
+            "Urbanization": "",
+            "CountryCode": "{{ADDR_COUNTRY}}"
+        }
+    }
+}

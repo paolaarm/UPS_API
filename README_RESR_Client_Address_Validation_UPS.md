@@ -33,3 +33,14 @@ Utilized the same request structure to obtain Testing access token and Productio
 Using Ctrl+Alt+E one can change the environment.
 
 <img width="444" height="81" alt="image" src="https://github.com/user-attachments/assets/613323ff-4722-4c90-a90a-b1f85e9a05f0" />
+
+5. Saving access token in a variable.
+Once the POST request returns the response, we can extract the "token_access" and save it in an environment variable.
+
+@access_token = {{response.response.body.$.access_token}}
+
+[name of variable] - [from the response request and response body extract the access token and save it in "access token."]
+
+This is crucial since it will be used for address validation request
+
+6. POST TEST

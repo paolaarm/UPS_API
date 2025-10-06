@@ -50,9 +50,20 @@ NOTE: In the Customer Integration Environment, Street Level Address Validation w
 * Used a "XAVRequest" for a CA address for testing
 
   * REQUEST
+    
     <img width="874" height="356" alt="image" src="https://github.com/user-attachments/assets/cd8940ab-ae6c-4377-826f-24dc59deb1ff" />
 
+
   * RESPONSE
+    
     <img width="730" height="620" alt="image" src="https://github.com/user-attachments/assets/cdeb2a16-1ab5-4759-9eaa-b183b773fa84" />
+
+7. POST PRODUCTION
+   * REQUEST
+   * This is the production request, utilizes a real address and file variables in the Request Body schema: application/json.
+   * Query Parameters
+     * regionalrequestindicator
+     * maximumcandidatelistsize   
+   <img width="725" height="506" alt="image" src="https://github.com/user-attachments/assets/27a2d03f-9d46-4e1d-87a6-2a1184377fb9" />
 
 

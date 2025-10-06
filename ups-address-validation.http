@@ -8,11 +8,11 @@ grant_type=client_credentials
 
 ### Request to validate an address using the access token
 @access_token = {{token_response.response.body.$.access_token}}
-@ADDR_LINE1 = 425 N Martingale Rd
-@ADDR_LINE2 =
-@ADDR_CITY = Schaumburg
-@ADDR_STATE = IL
-@ADDR_POSTAL = 60173
+@ADDR_LINE1 = 121 West George Ave
+@ADDR_LINE2 = Unit 202
+@ADDR_CITY = 
+@ADDR_STATE =
+@ADDR_POSTAL = 60112
 @ADDR_COUNTRY = US
 
 POST {{UPS_BASE_URL}}/api/addressvalidation/{{version}}/{{requestoption}}?regionalrequestindicator=True&maximumcandidatelistsize=50
@@ -27,7 +27,8 @@ Content-Type: application/json
             "ConsigneeName": "",
             "BuildingName": "",
             "AddressLine": [
-                "{{ADDR_LINE1}}"
+                "{{ADDR_LINE1}}",
+                "{{ADDR_LINE2}}"
             ],
             "Region": "",
             "PoliticalDivision2": "{{ADDR_CITY}}",

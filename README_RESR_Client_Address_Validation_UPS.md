@@ -15,8 +15,8 @@ At the "Shared" level, that is variables that will be used in both testing and p
 * UPS_TRANSACTION_ID
 
 REQUIRED path Parameters [UPS Documentation --> https://developer.ups.com/tag/Address-Validation?loc=en_US]
-requestoption
-version
+* requestoption
+* version
 
 The settings.json allows you to have variables for different environments. In this case I created a set of variables for the testing environment and another set of variables for the production environment. In reality only a variable for each that is the Base URL.
 
@@ -54,4 +54,5 @@ NOTE: In the Customer Integration Environment, Street Level Address Validation w
 
   * RESPONSE
     <img width="730" height="620" alt="image" src="https://github.com/user-attachments/assets/cdeb2a16-1ab5-4759-9eaa-b183b773fa84" />
+
 

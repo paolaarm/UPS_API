@@ -44,3 +44,14 @@ Once the POST request returns the response, we can extract the "token_access" an
 This is crucial since it will be used for address validation request
 
 6. POST TEST
+
+NOTE: In the Customer Integration Environment, Street Level Address Validation will only produce results for addresses in New York (NY) and California (CA).
+
+* Used a "XAVRequest" for a CA address for testing
+
+  * REQUEST
+    <img width="874" height="356" alt="image" src="https://github.com/user-attachments/assets/cd8940ab-ae6c-4377-826f-24dc59deb1ff" />
+
+  * RESPONSE
+    <img width="730" height="620" alt="image" src="https://github.com/user-attachments/assets/cdeb2a16-1ab5-4759-9eaa-b183b773fa84" />
+

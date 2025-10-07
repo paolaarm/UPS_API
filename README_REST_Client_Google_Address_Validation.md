@@ -1,10 +1,10 @@
 # GOOGLE ADDRESS VALIDATION WORKFLOW VS CODE REST Client (Extension) 
 
 ### STEPS 
-1.Create a project in GCP
-2.Obtain API Key 
-3.Create a HTTP file for the workflow 
-4.Creating Environment Variables - REST Client Setting --> Environment Variables --> Edit in settings.json
+1. Create a project in GCP
+2. Obtain API Key
+3. Create a HTTP file for the workflow
+4. Creating Environment Variables - REST Client Setting --> Environment Variables --> Edit in settings.json
 
 <img width="570" height="211" alt="image" src="https://github.com/user-attachments/assets/81090ebf-5007-4711-88cc-86badb4f5ef7" />
 
@@ -20,3 +20,4 @@
 
 
    
+

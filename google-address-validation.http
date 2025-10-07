@@ -1,0 +1,20 @@
+@ADDR_LINE1 = 425 N Martingale Rd
+@ADDR_LINE2 = 
+@ADDR_CITY = Schaumburg
+@ADDR_STATE = IL
+@ADDR_POSTAL = 60173
+@ADDR_COUNTRY = US
+
+POST {{GOOGLE_BASE}}/v1:validateAddress?key={{GOOGLE_API_KEY}}
+Content-Type: application/json
+
+{
+  "address": {
+    "regionCode": "{{ADDR_COUNTRY}}",
+    "locality": "{{ADDR_CITY}}",
+    "administrativeArea": "{{ADDR_STATE}}",
+    "postalCode": "{{ADDR_POSTAL}",
+    "addressLines": ["{{ADDR_LINE1}}"]
+  },
+  "enableUspsCass": true
+}

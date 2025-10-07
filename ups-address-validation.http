@@ -15,7 +15,7 @@ grant_type=client_credentials
 @ADDR_POSTAL = 60173
 @ADDR_COUNTRY = US
 
-POST {{UPS_BASE_URL}}/api/addressvalidation/{{version}}/{{requestoption}}?regionalrequestindicator=True&maximumcandidatelistsize=50
+POST {{UPS_BASE_URL}}/api/addressvalidation/{{version}}/{{requestoption}}?regionalrequestindicator=False&maximumcandidatelistsize=50
 Authorization: Bearer {{access_token}}
 transId: av-{{$timestamp}}
 transactionSrc: {{UPS_TRANSACTION_SRC}}

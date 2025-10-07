@@ -18,6 +18,15 @@
 
   <img width="302" height="170" alt="image" src="https://github.com/user-attachments/assets/fdc7ac09-7434-492b-9f28-7d5e064b3cd8" />
 
+7. POST REQUEST
 
+   <img width="392" height="208" alt="image" src="https://github.com/user-attachments/assets/9c936e38-fee7-4081-9102-0f8ee7a9495b" />
+
+8. Response basic JSON
    
+<img width="1242" height="686" alt="image" src="https://github.com/user-attachments/assets/07f935e0-606a-4cf4-9ddc-426df527d84f" />
+
+9. Response CASS Style JSON
+
+<img width="1242" height="686" alt="image" src="https://github.com/user-attachments/assets/919eafb8-668f-475a-a8d5-04b7da6756d2" />
 

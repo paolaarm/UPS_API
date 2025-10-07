@@ -28,5 +28,4 @@
 
 9. Response CASS Style JSON
 
-<img width="1242" height="686" alt="image" src="https://github.com/user-attachments/assets/919eafb8-668f-475a-a8d5-04b7da6756d2" />
-
+<img width="1208" height="687" alt="image" src="https://github.com/user-attachments/assets/29a3ad8e-6211-4b7e-97a8-8d7f4958bd90" />

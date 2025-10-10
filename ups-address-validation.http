@@ -8,12 +8,13 @@ grant_type=client_credentials
 
 ### Request to validate an address using the access token
 @access_token = {{token_response.response.body.$.access_token}}
-@ADDR_LINE1 = 12455 Jim Dhamer Dr
+
+@ADDR_LINE1 = 471 N High St
 @ADDR_LINE2 = 
-@ADDR_CITY = 
-@ADDR_STATE = IL
-@ADDR_POSTAL = 
-@ADDR_COUNTRY = US
+@ADDR_CITY = Hebron
+@ADDR_STATE = OH
+@ADDR_POSTAL = 43025
+@ADDR_COUNTRY = 
 
 POST {{UPS_BASE_URL}}/api/addressvalidation/{{version}}/{{requestoption}}?regionalrequestindicator=Truee&maximumcandidatelistsize=50
 Authorization: Bearer {{access_token}}
